@@ -1,0 +1,13 @@
+{
+  "name": "Keystroke Based User Authentication Application ",
+  "description": "This Application Authenticate the user based on keystroke patterns ! ",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/1.jpg"
+  },
+  "developer": {
+    "name": "Ashish Kumar Singh,Ravi Ranjan Kumar",
+    "url": "http://localhost:8090/hitTheDot/index.html"
+  },
+  "default_locale": "en"
+}

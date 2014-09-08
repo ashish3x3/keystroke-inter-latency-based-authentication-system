@@ -1,0 +1,93 @@
+
+<html>
+
+
+<head>
+
+
+
+
+<link rel="stylesheet" href="js/jquery.mobile-1.4.2.min.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.2.min.js"></script>
+
+
+<script>
+
+function check1(){
+var arr = [];
+i = 0;
+$(window).on('keyup', function(e) {
+
+/*if (e.type=="keydown"){
+      // it is keypress 
+	  //calc timestamp2
+	  alert("keydown");
+	  var timestamp2 = new Date().getTime();
+	  alert(timestamp2);
+	  
+   }
+   */
+   
+   if (e.type=="keyup") {
+   //calc timestamp1
+   var timestamp1 = new Date().getTime();
+  alert("keyup");
+   alert(timestamp1);
+  arr[i++]=timestamp1;
+   alert(arr[--i]);
+   console.log();
+   }
+   
+  //alert( parseInt(timestamp2)-parseInt(timestamp1));
+ // alert( eval((timestamp2)-(timestamp1)));
+ // alert(arr);
+
+}
+
+
+);
+}
+
+
+function check(){
+var times = [];
+
+// add an object with keycode and timestamp
+//$(document).keyup(function(evt) {
+document.getElementById('ok').onkeyup(function(evt) {
+    times.push({"timestamp":evt.timeStamp,
+                "keycode":evt.which})
+				alert("hii");
+				// alert(reportTimes());
+				
+});
+}
+
+// call this to get the string
+function reportTimes() {
+    var reportString = "";
+    for(var i = 0; i < times.length - 1; ++i) {
+         reportString += (i+1) + ": " + (times[i+1].timestamp - times[i].timestamp) + " ";
+    }
+   // return reportString; // add this somewhere or alert it
+   // alert(reportTimes());
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+<form name="loginForm" >
+USERNAME: <input type="text" value="" id="ok" onkeyup="check1()"  name="username" autocomplete="off" > <br/><br/> <br/><br/>
+PASSWORD: <input type="password" value="" name="password"  autocomplete="off" ><br/><br/>
+<input type="submit" onSubmit="check()" value="Submit" >
+
+<input type="button" onclick="check()" value="submit">
+
+</body>
+
+</html>
